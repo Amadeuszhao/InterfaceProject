@@ -1,4 +1,8 @@
 # Django Restful API Backend
+## 运行代码
+```python
+python manage.py runserver 8080
+```
 ## Basic address
 将上述的127.0.0.1:8080替换为https://f3d9-219-74-123-206.ap.ngrok.io
 如https://f3d9-219-74-123-206.ap.ngrok.io/api/adversarial_attack/1
