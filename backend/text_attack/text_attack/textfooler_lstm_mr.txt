@@ -1,0 +1,803 @@
+Attack(
+  (search_method): GreedyWordSwapWIR(
+    (wir_method):  delete
+  )
+  (goal_function):  UntargetedClassification
+  (transformation):  WordSwapEmbedding(
+    (max_candidates):  50
+    (embedding):  WordEmbedding
+  )
+  (constraints): 
+    (0): WordEmbeddingDistance(
+        (embedding):  WordEmbedding
+        (min_cos_sim):  0.5
+        (cased):  False
+        (include_unknown_words):  True
+        (compare_against_original):  True
+      )
+    (1): PartOfSpeech(
+        (tagger_type):  nltk
+        (tagset):  universal
+        (allow_verb_noun_swap):  True
+        (compare_against_original):  True
+      )
+    (2): UniversalSentenceEncoder(
+        (metric):  angular
+        (threshold):  0.840845057
+        (window_size):  15
+        (skip_text_shorter_than_window):  True
+        (compare_against_original):  False
+      )
+    (3): RepeatModification
+    (4): StopwordModification
+    (5): InputColumnModification(
+        (matching_column_labels):  ['premise', 'hypothesis']
+        (columns_to_ignore):  {'premise'}
+      )
+  (is_black_box):  True
+) 
+
+--------------------------------------------- Result 1 ---------------------------------------------
+[[Positive (91%)]] --> [[Negative (57%)]]
+
+lovingly photographed in the manner of a golden book sprung to life , stuart little 2 manages [[sweetness]] largely without stickiness .
+
+lovingly photographed in the manner of a golden book sprung to life , stuart little 2 manages [[honey]] largely without stickiness .
+
+
+--------------------------------------------- Result 2 ---------------------------------------------
+[[Positive (99%)]] --> [[Negative (97%)]]
+
+consistently [[clever]] and [[suspenseful]] .
+
+consistently [[malin]] and [[melodramatic]] .
+
+
+--------------------------------------------- Result 3 ---------------------------------------------
+[[Negative (78%)]] --> [[[SKIPPED]]]
+
+it's like a " big chill " reunion of the baader-meinhof gang , only these guys are more harmless pranksters than political activists .
+
+
+--------------------------------------------- Result 4 ---------------------------------------------
+[[Positive (96%)]] --> [[Negative (59%)]]
+
+the story gives ample opportunity for large-scale action and suspense , which director shekhar kapur supplies with [[tremendous]] [[skill]] .
+
+the story gives ample opportunity for large-scale action and suspense , which director shekhar kapur supplies with [[hefty]] [[proficiency]] .
+
+
+--------------------------------------------- Result 5 ---------------------------------------------
+[[Negative (57%)]] --> [[[SKIPPED]]]
+
+red dragon " never cuts corners .
+
+
+--------------------------------------------- Result 6 ---------------------------------------------
+[[Positive (51%)]] --> [[Negative (74%)]]
+
+fresnadillo has something serious to say about the ways in which extravagant chance can distort our perspective and throw us off the path of [[good]] sense .
+
+fresnadillo has something serious to say about the ways in which extravagant chance can distort our perspective and throw us off the path of [[proper]] sense .
+
+
+--------------------------------------------- Result 7 ---------------------------------------------
+[[Positive (89%)]] --> [[Negative (69%)]]
+
+throws in enough [[clever]] and unexpected twists to make the formula feel fresh .
+
+throws in enough [[termite]] and unexpected twists to make the formula feel fresh .
+
+
+--------------------------------------------- Result 8 ---------------------------------------------
+[[Negative (98%)]] --> [[[SKIPPED]]]
+
+weighty and ponderous but every bit as filling as the treat of the title .
+
+
+--------------------------------------------- Result 9 ---------------------------------------------
+[[Negative (89%)]] --> [[[SKIPPED]]]
+
+a real audience-pleaser that will strike a chord with anyone who's ever waited in a doctor's office , emergency room , hospital bed or insurance company office .
+
+
+--------------------------------------------- Result 10 ---------------------------------------------
+[[Positive (75%)]] --> [[Negative (91%)]]
+
+[[generates]] an enormous feeling of empathy for its characters .
+
+[[caused]] an enormous feeling of empathy for its characters .
+
+
+--------------------------------------------- Result 11 ---------------------------------------------
+[[Positive (56%)]] --> [[Negative (81%)]]
+
+exposing the ways we fool ourselves is one hour photo's real [[strength]] .
+
+exposing the ways we fool ourselves is one hour photo's real [[insistence]] .
+
+
+--------------------------------------------- Result 12 ---------------------------------------------
+[[Positive (56%)]] --> [[Negative (54%)]]
+
+it's up to you to decide whether to admire these people's dedication to their cause or be repelled by their dogmatism , manipulativeness and narrow , fearful view of american [[life]] .
+
+it's up to you to decide whether to admire these people's dedication to their cause or be repelled by their dogmatism , manipulativeness and narrow , fearful view of american [[vie]] .
+
+
+--------------------------------------------- Result 13 ---------------------------------------------
+[[Positive (69%)]] --> [[Negative (55%)]]
+
+mostly , [goldbacher] just [[lets]] her complicated characters be unruly , confusing and , through it all , human .
+
+mostly , [goldbacher] just [[entitles]] her complicated characters be unruly , confusing and , through it all , human .
+
+
+--------------------------------------------- Result 14 ---------------------------------------------
+[[Positive (58%)]] --> [[Negative (94%)]]
+
+. . . quite [[good]] at providing some good old fashioned spooks .
+
+. . . quite [[adequate]] at providing some good old fashioned spooks .
+
+
+--------------------------------------------- Result 15 ---------------------------------------------
+[[Negative (54%)]] --> [[[SKIPPED]]]
+
+at its worst , the movie is pretty diverting ; the pity is that it rarely achieves its best .
+
+
+--------------------------------------------- Result 16 ---------------------------------------------
+[[Positive (100%)]] --> [[Negative (85%)]]
+
+scherfig's light-hearted [[profile]] of emotional [[desperation]] is achingly honest and [[delightfully]] [[cheeky]] .
+
+scherfig's light-hearted [[characterize]] of emotional [[distress]] is achingly honest and [[shockingly]] [[inconsiderate]] .
+
+
+--------------------------------------------- Result 17 ---------------------------------------------
+[[Positive (79%)]] --> [[Negative (51%)]]
+
+a [[journey]] [[spanning]] nearly three decades of bittersweet camaraderie and history , in which we feel that we truly know what makes holly and marina tick , and our hearts go out to them as both continue to negotiate their imperfect , love-hate relationship .
+
+a [[displacement]] [[covered]] nearly three decades of bittersweet camaraderie and history , in which we feel that we truly know what makes holly and marina tick , and our hearts go out to them as both continue to negotiate their imperfect , love-hate relationship .
+
+
+--------------------------------------------- Result 18 ---------------------------------------------
+[[Positive (100%)]] --> [[Negative (65%)]]
+
+the [[wonderfully]] lush morvern callar is [[pure]] punk existentialism , and ms . ramsay and her co-writer , liana dognini , have dramatized the alan warner novel , which itself felt like an answer to irvine welsh's book trainspotting .
+
+the [[curiously]] lush morvern callar is [[mere]] punk existentialism , and ms . ramsay and her co-writer , liana dognini , have dramatized the alan warner novel , which itself felt like an answer to irvine welsh's book trainspotting .
+
+
+--------------------------------------------- Result 19 ---------------------------------------------
+[[Positive (81%)]] --> [[Negative (58%)]]
+
+as it [[turns]] out , you can go home again .
+
+as it [[translates]] out , you can go home again .
+
+
+--------------------------------------------- Result 20 ---------------------------------------------
+[[Negative (76%)]] --> [[[SKIPPED]]]
+
+you've already seen city by the sea under a variety of titles , but it's worth yet another visit .
+
+
+--------------------------------------------- Result 21 ---------------------------------------------
+[[Positive (73%)]] --> [[Negative (71%)]]
+
+this kind of hands-on storytelling is ultimately what makes shanghai ghetto move beyond a good , dry , [[reliable]] textbook and what allows it to rank with its worthy predecessors .
+
+this kind of hands-on storytelling is ultimately what makes shanghai ghetto move beyond a good , dry , [[plausible]] textbook and what allows it to rank with its worthy predecessors .
+
+
+--------------------------------------------- Result 22 ---------------------------------------------
+[[Negative (73%)]] --> [[[SKIPPED]]]
+
+making such a tragedy the backdrop to a love story risks trivializing it , though chouraqui no doubt intended the film to affirm love's power to help people endure almost unimaginable horror .
+
+
+--------------------------------------------- Result 23 ---------------------------------------------
+[[Negative (62%)]] --> [[[SKIPPED]]]
+
+grown-up quibbles are beside the point here . the little girls understand , and mccracken knows that's all that matters .
+
+
+--------------------------------------------- Result 24 ---------------------------------------------
+[[Positive (100%)]] --> [[Negative (76%)]]
+
+a powerful , [[chilling]] , and [[affecting]] study of one man's dying fall .
+
+a powerful , [[cooler]] , and [[consequence]] study of one man's dying fall .
+
+
+--------------------------------------------- Result 25 ---------------------------------------------
+[[Positive (94%)]] --> [[Negative (63%)]]
+
+this is a [[fascinating]] [[film]] because there is no clear-cut hero and no all-out villain .
+
+this is a [[gripping]] [[moviemaking]] because there is no clear-cut hero and no all-out villain .
+
+
+--------------------------------------------- Result 26 ---------------------------------------------
+[[Positive (71%)]] --> [[Negative (57%)]]
+
+a dreadful day in irish [[history]] is given passionate , if somewhat flawed , treatment .
+
+a dreadful day in irish [[narration]] is given passionate , if somewhat flawed , treatment .
+
+
+--------------------------------------------- Result 27 ---------------------------------------------
+[[Positive (71%)]] --> [[Negative (74%)]]
+
+. . . a good film that must have baffled the [[folks]] in the marketing department .
+
+. . . a good film that must have baffled the [[dawg]] in the marketing department .
+
+
+--------------------------------------------- Result 28 ---------------------------------------------
+[[Positive (81%)]] --> [[Negative (55%)]]
+
+. . . is funny in the way that makes you ache with [[sadness]] ( the way chekhov is [[funny]] ) , [[profound]] without ever being self-important , warm without ever succumbing to sentimentality .
+
+. . . is funny in the way that makes you ache with [[sad]] ( the way chekhov is [[hilarious]] ) , [[ingrained]] without ever being self-important , warm without ever succumbing to sentimentality .
+
+
+--------------------------------------------- Result 29 ---------------------------------------------
+[[Negative (71%)]] --> [[[SKIPPED]]]
+
+devotees of star trek ii : the wrath of khan will feel a nagging sense of deja vu , and the grandeur of the best next generation episodes is lacking .
+
+
+--------------------------------------------- Result 30 ---------------------------------------------
+[[Positive (81%)]] --> [[Negative (54%)]]
+
+a soul-stirring [[documentary]] about the israeli/palestinian conflict as revealed through the [[eyes]] of some children who remain curious about each other against all odds .
+
+a soul-stirring [[documentaries]] about the israeli/palestinian conflict as revealed through the [[glance]] of some children who remain curious about each other against all odds .
+
+
+--------------------------------------------- Result 31 ---------------------------------------------
+[[Negative (84%)]] --> [[[SKIPPED]]]
+
+what's so striking about jolie's performance is that she never lets her character become a caricature -- not even with that radioactive hair .
+
+
+--------------------------------------------- Result 32 ---------------------------------------------
+[[Negative (74%)]] --> [[[SKIPPED]]]
+
+the main story . . . is compelling enough , but it's difficult to shrug off the annoyance of that chatty fish .
+
+
+--------------------------------------------- Result 33 ---------------------------------------------
+[[Positive (90%)]] --> [[Negative (86%)]]
+
+the [[performances]] are immaculate , with roussillon [[providing]] comic relief .
+
+the [[interpreting]] are immaculate , with roussillon [[afford]] comic relief .
+
+
+--------------------------------------------- Result 34 ---------------------------------------------
+[[Positive (98%)]] --> [[Negative (80%)]]
+
+kinnear . . . gives his best screen performance with an oddly winning [[portrayal]] of one of life's ultimate losers .
+
+kinnear . . . gives his best screen performance with an oddly winning [[spitting]] of one of life's ultimate losers .
+
+
+--------------------------------------------- Result 35 ---------------------------------------------
+[[Positive (83%)]] --> [[Negative (51%)]]
+
+hugh grant , who has a good line in charm , has never been more [[charming]] than in about a boy .
+
+hugh grant , who has a good line in charm , has never been more [[loveable]] than in about a boy .
+
+
+--------------------------------------------- Result 36 ---------------------------------------------
+[[Positive (74%)]] --> [[Negative (51%)]]
+
+there's a lot of tooth in roger dodger . but what's nice is that there's a casual [[intelligence]] that [[permeates]] the script .
+
+there's a lot of tooth in roger dodger . but what's nice is that there's a casual [[mind]] that [[wafts]] the script .
+
+
+--------------------------------------------- Result 37 ---------------------------------------------
+[[Negative (62%)]] --> [[[SKIPPED]]]
+
+reminiscent of alfred hitchcock's thrillers , most of the scary parts in 'signs' occur while waiting for things to happen .
+
+
+--------------------------------------------- Result 38 ---------------------------------------------
+[[Positive (94%)]] --> [[Negative (75%)]]
+
+one of the best looking and [[stylish]] animated [[movies]] in quite a while . . .
+
+one of the best looking and [[trendy]] animated [[footage]] in quite a while . . .
+
+
+--------------------------------------------- Result 39 ---------------------------------------------
+[[Positive (91%)]] --> [[Negative (51%)]]
+
+its use of the thriller form to [[examine]] the labyrinthine [[ways]] in which people's lives cross and change , buffeted by events seemingly out of their control , is intriguing , provocative stuff .
+
+its use of the thriller form to [[examination]] the labyrinthine [[pleas]] in which people's lives cross and change , buffeted by events seemingly out of their control , is intriguing , provocative stuff .
+
+
+--------------------------------------------- Result 40 ---------------------------------------------
+[[Positive (87%)]] --> [[Negative (50%)]]
+
+denver should not [[get]] the first and last look at one of the most [[triumphant]] [[performances]] of vanessa redgrave's career . it [[deserves]] to be seen everywhere .
+
+denver should not [[obtain]] the first and last look at one of the most [[prevails]] [[spectacles]] of vanessa redgrave's career . it [[warranted]] to be seen everywhere .
+
+
+--------------------------------------------- Result 41 ---------------------------------------------
+[[Positive (58%)]] --> [[Negative (52%)]]
+
+you needn't be steeped in '50s sociology , pop culture or movie lore to appreciate the emotional depth of haynes' work . though haynes' style apes films from the period . . . its message is not rooted in that [[decade]] .
+
+you needn't be steeped in '50s sociology , pop culture or movie lore to appreciate the emotional depth of haynes' work . though haynes' style apes films from the period . . . its message is not rooted in that [[ten]] .
+
+
+--------------------------------------------- Result 42 ---------------------------------------------
+[[Positive (51%)]] --> [[Negative (59%)]]
+
+waiting for godard can be fruitful : 'in [[praise]] of love' is the director's epitaph for himself .
+
+waiting for godard can be fruitful : 'in [[extol]] of love' is the director's epitaph for himself .
+
+
+--------------------------------------------- Result 43 ---------------------------------------------
+[[Negative (57%)]] --> [[[SKIPPED]]]
+
+a gangster movie with the capacity to surprise .
+
+
+--------------------------------------------- Result 44 ---------------------------------------------
+[[Positive (60%)]] --> [[Negative (74%)]]
+
+the film [[has]] a laundry list of minor shortcomings , but the numerous scenes of gory mayhem are worth the price of admission . . . if " gory mayhem " is your idea of a good time .
+
+the film [[is]] a laundry list of minor shortcomings , but the numerous scenes of gory mayhem are worth the price of admission . . . if " gory mayhem " is your idea of a good time .
+
+
+--------------------------------------------- Result 45 ---------------------------------------------
+[[Positive (60%)]] --> [[Negative (81%)]]
+
+if not a home run , then at least a [[solid]] base hit .
+
+if not a home run , then at least a [[audible]] base hit .
+
+
+--------------------------------------------- Result 46 ---------------------------------------------
+[[Negative (93%)]] --> [[[SKIPPED]]]
+
+goldmember is funny enough to justify the embarrassment of bringing a barf bag to the moviehouse .
+
+
+--------------------------------------------- Result 47 ---------------------------------------------
+[[Positive (93%)]] --> [[Negative (71%)]]
+
+. . . a fairly disposable yet still [[entertaining]] b picture .
+
+. . . a fairly disposable yet still [[distraction]] b picture .
+
+
+--------------------------------------------- Result 48 ---------------------------------------------
+[[Positive (99%)]] --> [[Negative (80%)]]
+
+it may not be particularly innovative , but the film's [[crisp]] , unaffected style and air of [[gentle]] [[longing]] make it unexpectedly rewarding .
+
+it may not be particularly innovative , but the film's [[pronounced]] , unaffected style and air of [[innocuous]] [[wanting]] make it unexpectedly rewarding .
+
+
+--------------------------------------------- Result 49 ---------------------------------------------
+[[Positive (57%)]] --> [[Negative (95%)]]
+
+the film [[truly]] does rescue [the funk brothers] from motown's shadows . it's about time .
+
+the film [[admittedly]] does rescue [the funk brothers] from motown's shadows . it's about time .
+
+
+--------------------------------------------- Result 50 ---------------------------------------------
+[[Positive (87%)]] --> [[Negative (54%)]]
+
+drawing on an [[irresistible]] , languid romanticism , byler reveals the ways in which a sultry evening or a beer-fueled afternoon in the sun can inspire even the most retiring heart to venture forth .
+
+drawing on an [[unavoidable]] , languid romanticism , byler reveals the ways in which a sultry evening or a beer-fueled afternoon in the sun can inspire even the most retiring heart to venture forth .
+
+
+--------------------------------------------- Result 51 ---------------------------------------------
+[[Negative (73%)]] --> [[[SKIPPED]]]
+
+works because we're never sure if ohlinger's on the level or merely a dying , delusional man trying to get into the history books before he croaks .
+
+
+--------------------------------------------- Result 52 ---------------------------------------------
+[[Positive (61%)]] --> [[Negative (58%)]]
+
+[scherfig] has made a movie that [[will]] leave you wondering about the characters' lives after the clever credits roll .
+
+[scherfig] has made a movie that [[goes]] leave you wondering about the characters' lives after the clever credits roll .
+
+
+--------------------------------------------- Result 53 ---------------------------------------------
+[[Positive (85%)]] --> [[Negative (67%)]]
+
+a [[heady]] , biting , be-bop ride through [[nighttime]] manhattan , a loquacious videologue of the modern male and the lengths to which he'll go to weave a protective cocoon around his [[own]] ego .
+
+a [[fevered]] , biting , be-bop ride through [[overnight]] manhattan , a loquacious videologue of the modern male and the lengths to which he'll go to weave a protective cocoon around his [[possessed]] ego .
+
+
+--------------------------------------------- Result 54 ---------------------------------------------
+[[Positive (64%)]] --> [[Negative (52%)]]
+
+skin of man gets a few cheap shocks from its kids-in-peril theatrics , but it also [[taps]] into the primal fears of young people trying to cope with the mysterious and brutal nature of adults .
+
+skin of man gets a few cheap shocks from its kids-in-peril theatrics , but it also [[faucets]] into the primal fears of young people trying to cope with the mysterious and brutal nature of adults .
+
+
+--------------------------------------------- Result 55 ---------------------------------------------
+[[Positive (87%)]] --> [[Negative (52%)]]
+
+the piano teacher is not an easy [[film]] . it forces you to watch people doing unpleasant things to each other and themselves , and it maintains a [[cool]] [[distance]] from its material that is deliberately unsettling .
+
+the piano teacher is not an easy [[cameraman]] . it forces you to watch people doing unpleasant things to each other and themselves , and it maintains a [[cooled]] [[distant]] from its material that is deliberately unsettling .
+
+
+--------------------------------------------- Result 56 ---------------------------------------------
+[[Negative (74%)]] --> [[[SKIPPED]]]
+
+as refreshing as a drink from a woodland stream .
+
+
+--------------------------------------------- Result 57 ---------------------------------------------
+[[Negative (73%)]] --> [[[SKIPPED]]]
+
+williams absolutely nails sy's queasy infatuation and overall strangeness .
+
+
+--------------------------------------------- Result 58 ---------------------------------------------
+[[Negative (89%)]] --> [[[SKIPPED]]]
+
+can i admit xxx is as deep as a petri dish and as well-characterized as a telephone book but still say it was a guilty pleasure ?
+
+
+--------------------------------------------- Result 59 ---------------------------------------------
+[[Positive (67%)]] --> [[Negative (62%)]]
+
+while it's nothing we haven't seen before from murphy , i spy is still fun and [[enjoyable]] and so aggressively silly that it's more than a worthwhile effort .
+
+while it's nothing we haven't seen before from murphy , i spy is still fun and [[pleasant]] and so aggressively silly that it's more than a worthwhile effort .
+
+
+--------------------------------------------- Result 60 ---------------------------------------------
+[[Positive (60%)]] --> [[Negative (53%)]]
+
+by the time it ends in a rush of sequins , flashbulbs , blaring brass and back-stabbing babes , it has said plenty about how show business has infiltrated [[every]] corner of [[society]] -- and not always for the better .
+
+by the time it ends in a rush of sequins , flashbulbs , blaring brass and back-stabbing babes , it has said plenty about how show business has infiltrated [[all]] corner of [[corporations]] -- and not always for the better .
+
+
+--------------------------------------------- Result 61 ---------------------------------------------
+[[Positive (95%)]] --> [[Negative (85%)]]
+
+an intimate contemplation of two [[marvelously]] messy lives .
+
+an intimate contemplation of two [[terribly]] messy lives .
+
+
+--------------------------------------------- Result 62 ---------------------------------------------
+[[Positive (58%)]] --> [[Negative (58%)]]
+
+rarely has skin looked as beautiful , desirable , even [[delectable]] , as it does in trouble every day .
+
+rarely has skin looked as beautiful , desirable , even [[delish]] , as it does in trouble every day .
+
+
+--------------------------------------------- Result 63 ---------------------------------------------
+[[Positive (89%)]] --> [[Negative (59%)]]
+
+this is one of those [[rare]] docs that [[paints]] a grand picture of an era and makes the journey feel like a party .
+
+this is one of those [[scarce]] docs that [[airbrush]] a grand picture of an era and makes the journey feel like a party .
+
+
+--------------------------------------------- Result 64 ---------------------------------------------
+[[Positive (98%)]] --> [[Negative (76%)]]
+
+[[poignant]] if familiar story of a young person suspended between two cultures .
+
+[[worrying]] if familiar story of a young person suspended between two cultures .
+
+
+--------------------------------------------- Result 65 ---------------------------------------------
+[[Negative (61%)]] --> [[[SKIPPED]]]
+
+a metaphor for a modern-day urban china searching for its identity .
+
+
+--------------------------------------------- Result 66 ---------------------------------------------
+[[Positive (93%)]] --> [[Negative (66%)]]
+
+for all its brooding quality , ash wednesday is [[suspenseful]] and ultimately unpredictable , with a sterling ensemble cast .
+
+for all its brooding quality , ash wednesday is [[melodramatic]] and ultimately unpredictable , with a sterling ensemble cast .
+
+
+--------------------------------------------- Result 67 ---------------------------------------------
+[[Negative (62%)]] --> [[[SKIPPED]]]
+
+an odd drama set in the world of lingerie models and bar dancers in the midwest that held my interest precisely because it didn't try to .
+
+
+--------------------------------------------- Result 68 ---------------------------------------------
+[[Negative (81%)]] --> [[[SKIPPED]]]
+
+the film feels uncomfortably real , its language and locations bearing the unmistakable stamp of authority .
+
+
+--------------------------------------------- Result 69 ---------------------------------------------
+[[Positive (75%)]] --> [[Negative (69%)]]
+
+despite its faults , gangs [[excels]] in spectacle and pacing .
+
+despite its faults , gangs [[crushes]] in spectacle and pacing .
+
+
+--------------------------------------------- Result 70 ---------------------------------------------
+[[Positive (97%)]] --> [[Negative (64%)]]
+
+[[entertaining]] despite its one-joke premise with the thesis that women from venus and men from mars can indeed get together .
+
+[[giggling]] despite its one-joke premise with the thesis that women from venus and men from mars can indeed get together .
+
+
+--------------------------------------------- Result 71 ---------------------------------------------
+[[Positive (96%)]] --> [[Negative (91%)]]
+
+a tightly directed , [[highly]] professional film that's old-fashioned in all the best possible ways .
+
+a tightly directed , [[unspeakably]] professional film that's old-fashioned in all the best possible ways .
+
+
+--------------------------------------------- Result 72 ---------------------------------------------
+[[Positive (95%)]] --> [[Negative (73%)]]
+
+it's dark but has [[wonderfully]] [[funny]] moments ; you care about the characters ; and the action and [[special]] effects are first-rate .
+
+it's dark but has [[interestingly]] [[giggling]] moments ; you care about the characters ; and the action and [[specific]] effects are first-rate .
+
+
+--------------------------------------------- Result 73 ---------------------------------------------
+[[Positive (83%)]] --> [[Negative (56%)]]
+
+in [[visual]] fertility treasure planet rivals the top japanese animations of recent vintage .
+
+in [[audiovisual]] fertility treasure planet rivals the top japanese animations of recent vintage .
+
+
+--------------------------------------------- Result 74 ---------------------------------------------
+[[Positive (100%)]] --> [[Negative (79%)]]
+
+enormously [[enjoyable]] , high-adrenaline documentary .
+
+enormously [[loveable]] , high-adrenaline documentary .
+
+
+--------------------------------------------- Result 75 ---------------------------------------------
+[[Positive (96%)]] --> [[Negative (80%)]]
+
+buy is an accomplished actress , and this is a big , [[juicy]] [[role]] .
+
+buy is an accomplished actress , and this is a big , [[earner]] [[rol]] .
+
+
+--------------------------------------------- Result 76 ---------------------------------------------
+[[Positive (99%)]] --> [[Negative (57%)]]
+
+it works its magic with such exuberance and [[passion]] that the film's length becomes a [[part]] of its [[fun]] .
+
+it works its magic with such exuberance and [[recreation]] that the film's length becomes a [[portion]] of its [[joke]] .
+
+
+--------------------------------------------- Result 77 ---------------------------------------------
+[[Positive (100%)]] --> [[Negative (54%)]]
+
+[[beautifully]] [[crafted]] and brutally honest , promises offers an unexpected window into the [[complexities]] of the middle east struggle and into the humanity of its people .
+
+[[unspeakably]] [[devising]] and brutally honest , promises offers an unexpected window into the [[complicated]] of the middle east struggle and into the humanity of its people .
+
+
+--------------------------------------------- Result 78 ---------------------------------------------
+[[Positive (89%)]] --> [[Negative (78%)]]
+
+an old-fashioned but emotionally stirring [[adventure]] [[tale]] of the kind they rarely make anymore .
+
+an old-fashioned but emotionally stirring [[affair]] [[escudos]] of the kind they rarely make anymore .
+
+
+--------------------------------------------- Result 79 ---------------------------------------------
+[[Positive (95%)]] --> [[Negative (93%)]]
+
+charlotte sometimes is a [[gem]] . it's always [[enthralling]] .
+
+charlotte sometimes is a [[gemstone]] . it's always [[puzzling]] .
+
+
+--------------------------------------------- Result 80 ---------------------------------------------
+[[Positive (88%)]] --> [[Negative (63%)]]
+
+in my opinion , analyze that is not as funny or entertaining as analyze this , but it is a [[respectable]] sequel .
+
+in my opinion , analyze that is not as funny or entertaining as analyze this , but it is a [[proper]] sequel .
+
+
+--------------------------------------------- Result 81 ---------------------------------------------
+[[Positive (99%)]] --> [[Negative (98%)]]
+
+a [[remarkable]] film by bernard rose .
+
+a [[unpaid]] film by bernard rose .
+
+
+--------------------------------------------- Result 82 ---------------------------------------------
+[[Positive (97%)]] --> [[Negative (77%)]]
+
+zhuangzhuang creates [[delicate]] balance of style , text , and subtext that's so simple and precise that anything discordant would topple the balance , but against all odds , nothing does .
+
+zhuangzhuang creates [[cumbersome]] balance of style , text , and subtext that's so simple and precise that anything discordant would topple the balance , but against all odds , nothing does .
+
+
+--------------------------------------------- Result 83 ---------------------------------------------
+[[Positive (78%)]] --> [[Negative (66%)]]
+
+a much more [[successful]] translation than its most famous previous film adaptation , writer-director anthony friedman's [[similarly]] updated 1970 [[british]] production .
+
+a much more [[satisfactory]] translation than its most famous previous film adaptation , writer-director anthony friedman's [[likewise]] updated 1970 [[anglican]] production .
+
+
+--------------------------------------------- Result 84 ---------------------------------------------
+[[Positive (75%)]] --> [[Negative (90%)]]
+
+an original and [[highly]] cerebral examination of the psychopathic mind
+
+an original and [[terribly]] cerebral examination of the psychopathic mind
+
+
+--------------------------------------------- Result 85 ---------------------------------------------
+[[Positive (70%)]] --> [[Negative (54%)]]
+
+michel piccoli's moving performance is this [[films]] reason for being .
+
+michel piccoli's moving performance is this [[photos]] reason for being .
+
+
+--------------------------------------------- Result 86 ---------------------------------------------
+[[Positive (100%)]] --> [[Negative (98%)]]
+
+a [[captivating]] and [[intimate]] study about dying and [[loving]] . . .
+
+a [[breathless]] and [[respondent]] study about dying and [[amour]] . . .
+
+
+--------------------------------------------- Result 87 ---------------------------------------------
+[[Positive (99%)]] --> [[Negative (72%)]]
+
+this is an [[elegantly]] [[balanced]] movie -- every member of the ensemble has something [[fascinating]] to do -- that doesn't reveal even a hint of artifice .
+
+this is an [[neatly]] [[reconciling]] movie -- every member of the ensemble has something [[puzzling]] to do -- that doesn't reveal even a hint of artifice .
+
+
+--------------------------------------------- Result 88 ---------------------------------------------
+[[Positive (96%)]] --> [[Negative (55%)]]
+
+[grant] goes beyond his usual fluttering and stammering and [[captures]] the soul of a man in pain who gradually comes to recognize it and deal with it .
+
+[grant] goes beyond his usual fluttering and stammering and [[collect]] the soul of a man in pain who gradually comes to recognize it and deal with it .
+
+
+--------------------------------------------- Result 89 ---------------------------------------------
+[[Positive (99%)]] --> [[Negative (63%)]]
+
+a high-spirited buddy [[movie]] about the reunion of [[berlin]] [[anarchists]] who [[face]] [[arrest]] 15 [[years]] after their [[crime]] .
+
+a high-spirited buddy [[footage]] about the reunion of [[deutsche]] [[crackpots]] who [[frente]] [[halts]] 15 [[anni]] after their [[infraction]] .
+
+
+--------------------------------------------- Result 90 ---------------------------------------------
+[[Negative (54%)]] --> [[[SKIPPED]]]
+
+about the best thing you could say about narc is that it's a rock-solid little genre picture . whether you like it or not is basically a matter of taste .
+
+
+--------------------------------------------- Result 91 ---------------------------------------------
+[[Negative (81%)]] --> [[[SKIPPED]]]
+
+an involving , inspirational drama that sometimes falls prey to its sob-story trappings .
+
+
+--------------------------------------------- Result 92 ---------------------------------------------
+[[Positive (58%)]] --> [[Negative (79%)]]
+
+some of the most inventive silliness you are likely to [[witness]] in a movie theatre for some time .
+
+some of the most inventive silliness you are likely to [[testimonial]] in a movie theatre for some time .
+
+
+--------------------------------------------- Result 93 ---------------------------------------------
+[[Positive (100%)]] --> [[Negative (72%)]]
+
+canadian filmmaker gary burns' [[inventive]] and mordantly [[humorous]] take on the soullessness of work in the city .
+
+canadian filmmaker gary burns' [[contrivance]] and mordantly [[charade]] take on the soullessness of work in the city .
+
+
+--------------------------------------------- Result 94 ---------------------------------------------
+[[Positive (92%)]] --> [[Negative (60%)]]
+
+a rollicking ride , with jaw-dropping action sequences , striking villains , a gorgeous color palette , astounding technology , [[stirring]] music and a boffo last hour that leads up to a strangely sinister happy ending .
+
+a rollicking ride , with jaw-dropping action sequences , striking villains , a gorgeous color palette , astounding technology , [[backwater]] music and a boffo last hour that leads up to a strangely sinister happy ending .
+
+
+--------------------------------------------- Result 95 ---------------------------------------------
+[[Positive (99%)]] --> [[Negative (52%)]]
+
+everyone's insecure in [[lovely]] and amazing , a [[poignant]] and wryly amusing film about mothers , daughters and their relationships .
+
+everyone's insecure in [[loveable]] and amazing , a [[dire]] and wryly amusing film about mothers , daughters and their relationships .
+
+
+--------------------------------------------- Result 96 ---------------------------------------------
+[[Negative (55%)]] --> [[[SKIPPED]]]
+
+the closest thing to the experience of space travel
+
+
+--------------------------------------------- Result 97 ---------------------------------------------
+[[Positive (72%)]] --> [[Negative (96%)]]
+
+full of [[surprises]] .
+
+full of [[stupor]] .
+
+
+--------------------------------------------- Result 98 ---------------------------------------------
+[[Positive (77%)]] --> [[Negative (54%)]]
+
+connoisseurs of chinese [[film]] will be pleased to discover that tian's meticulous talent has not withered during his enforced hiatus .
+
+connoisseurs of chinese [[footage]] will be pleased to discover that tian's meticulous talent has not withered during his enforced hiatus .
+
+
+--------------------------------------------- Result 99 ---------------------------------------------
+[[Positive (81%)]] --> [[Negative (85%)]]
+
+if you can push on through the slow spots , you'll be [[rewarded]] with some [[fine]] acting .
+
+if you can push on through the slow spots , you'll be [[recompense]] with some [[loverly]] acting .
+
+
+--------------------------------------------- Result 100 ---------------------------------------------
+[[Negative (58%)]] --> [[[SKIPPED]]]
+
+an unusually dry-eyed , even analytical approach to material that is generally played for maximum moisture .
+
+
+
++-------------------------------+--------+
+| Attack Results                |        |
++-------------------------------+--------+
+| Number of successful attacks: | 75     |
+| Number of failed attacks:     | 0      |
+| Number of skipped attacks:    | 25     |
+| Original accuracy:            | 75.0%  |
+| Accuracy under attack:        | 0.0%   |
+| Attack success rate:          | 100.0% |
+| Average perturbed word %:     | 11.26% |
+| Average num. words per input: | 18.45  |
+| Avg num queries:              | 66.52  |
++-------------------------------+--------+
