@@ -144,6 +144,7 @@ export default {
 }
 </script>
 <style scoped>
+@import 'assets/bundle.css';
 body{
   padding: 0;
   margin: 0;
