@@ -6,12 +6,10 @@ import Project from '@/views/Home/Project'
 import Team from '@/views/Home/Team'
 import Welcome from '@/views/Home/Main/Welcome'
 import Verify from '@/views/Home/Main/Verify'
-import Adversarial from '@/views/Home/Main/Adversarial'
-import Backdoor from '@/views/Home/Main/Backdoor'
 import Demo from '@/views/Home/Main/Demo'
-import Textattack from '@/views/Home/Main/Textattack'
-import Image from '@/views/Home/Main/Image'
 import Repair from '@/views/Home/Main/Repair'
+import Attack from '@/views/Home/Main/Attack'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -50,20 +48,24 @@ const routes = [
             component: Verify
           },
           {
-            path: '/image',
-            redirect: '/adversarial',
-            component: Image,
-            children: [
-              {
-                path: '/adversarial',
-                component: Adversarial
-              },
-              {
-                path: '/backdoor',
-                component: Backdoor
-              }
-            ]
+            path: '/attack',
+            component: Attack
           },
+          // {
+          //   path: '/image',
+          //   redirect: '/adversarial',
+          //   component: Image,
+          //   children: [
+          //     {
+          //       path: '/adversarial',
+          //       component: Adversarial
+          //     },
+          //     {
+          //       path: '/backdoor',
+          //       component: Backdoor
+          //     }
+          //   ]
+          // },
           {
             path: '/repair',
             redirect: '/demo',
@@ -76,16 +78,20 @@ const routes = [
             ]
           },
           {
-            path: '/text',
-            component: Textattack
+            path: '/project',
+            component: Project
           }
+          // {
+          //   path: '/text',
+          //   component: Textattack
+          // }
         ]
 
       },
-      {
-        path: '/project',
-        component: Project
-      },
+      // {
+      //   path: '/project',
+      //   component: Project
+      // },
       {
         path: '/team',
         component: Team

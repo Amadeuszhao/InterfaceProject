@@ -17,7 +17,7 @@ Vue.use(mavonEditor)
 Vue.prototype.$video = Video
 
 Vue.prototype.$echarts = echarts
-Vue.prototype.axios = axios
+Vue.prototype.$axios = axios
 Vue.use(ElementUI)
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
