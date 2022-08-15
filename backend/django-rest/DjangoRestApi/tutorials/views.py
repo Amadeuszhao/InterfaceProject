@@ -5,6 +5,8 @@ from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser 
 from rest_framework import status
 from tutorials.attack.adversarial_attack import *
+from tutorials.attack.get_text import get_text
+
 from tutorials.models import Tutorial,AdversarialAttack,TextAttack
 from tutorials.serializers import *
 from rest_framework.decorators import api_view
@@ -87,6 +89,7 @@ def backdoor_detail(request,pk):
     if request.method == 'GET': 
         backdoor_serializer = BackdoorAttackSerializer(backdoors)
         return JsonResponse(backdoor_serializer.data) 
+
 @api_view(['GET','POST'])
 def text_attack_generate(request):
     if request.method == 'GET':
@@ -95,6 +98,9 @@ def text_attack_generate(request):
         return JsonResponse(text_serializer.data, safe=False)
     elif request.method == 'POST':
         attack = JSONParser().parse(request)
+        text_message = attack['text']
+        result_text = get_text(text_message)
+        attack["attack_text"] = result_text
         text_serializer = TextAttackSerializer(data=attack)
         if text_serializer.is_valid():
             text_serializer.save()

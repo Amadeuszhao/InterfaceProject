@@ -33,3 +33,4 @@ class TextAttack(models.Model):
     attack_class = models.CharField(max_length=60,blank=False,default='4' )
     dataset = models.CharField(max_length=60,blank=False,default='imdb' )
     model = models.CharField(max_length=60,blank=False,default='lstm' )
+
