@@ -84,3 +84,9 @@ this.$axios.post("http://127.0.0.1:8080/api/adversarial_attack",{"image":"这里
                   'model',
                 )
 ```
+
+python manage.py makemigrations tutorials
+
+python manage.py migrate tutorials
+
+python manage.py runserver 8080
