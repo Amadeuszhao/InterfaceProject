@@ -37,8 +37,16 @@
               <label for="target">Trigger Target</label>
               <div class="select">
                 <select id="activations">
-                  <option value="1">target 1</option>
-                  <option value="2">target 2</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="0">0</option>
                 </select>
               </div>
             </div>
@@ -84,8 +92,8 @@
             <div class="ui-dataset">
               <p>Demonstration of original image</p>
             </div>
-            <div>
             <div v-if="show_image==true" style="margin-top: 20px">
+            <div>
               <img v-bind:src="image" width="100%"/>
             </div>
             <div style="margin-top: 20px">
@@ -98,7 +106,7 @@
               <span>Attack</span>
             </h4>
             <div class="ui-dataset">
-              <p>Demonstration of attack</p>
+              <p>Demonstration of attacked image</p>
             </div>
             <div v-if="show_image==true" style="margin-top: 20px">
             <div>
@@ -148,7 +156,8 @@ export default {
           self.perturbation = res.data.perturbation
           self.attack_image = res.data.attack_image
           self.image_class = res.data.image_class
-          self.perturbation_class = res.data.perturbation_class
+          // self.perturbation_class = res.data.perturbation_class
+          self.perturbation_class = 'data:image/jpeg;base64,'
           self.attack_class = res.data.attack_class
         })
         .then(() => {

@@ -1,0 +1,24 @@
+Accuracy importance alpha: 0.1
+Causal analysis step size: 16
+Accuracy test data percentage: 0.16666666666666666
+Discriminitary data sample percentage: 0.04875670404680644
+Analyze causal attribution of hidden neurons to unfairness:
+Analyzing layer 0
+Analyzing layer 1
+Analyzing layer 2
+Analyzing layer 3
+Analyzing layer 4
+Repair:
+
+Repair layer: [4, 2, 6, 2, 4, 4, 6, 6, 4, 4, 4, 4, 2]
+Repair neuron: [12, 15, 7, 24, 8, 1, 5, 3, 10, 9, 6, 0, 30]
+Start reparing...
+Percentage of discriminatory instance after repair: 1.0
+Percentage of discriminatory instance after repair: 0.89
+Network Accuracy after repair: 0.9966666666666667
+Network Accuracy before repair: 1.0
+Fault localization time(s): 77.10377788543701
+Total execution time(s): 101.31948399543762
+
+============================
+
