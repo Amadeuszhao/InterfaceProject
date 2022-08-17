@@ -430,6 +430,23 @@
    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
    background: white;
  }
+
+ #top-controls-backdoor {
+  border-bottom: 1px solid #ddd;
+  padding: 18px 0 10px 10px;
+  width: 60%;
+  display: block;
+  margin-left: 25%;
+  margin-right: auto;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  background: white;
+}
+
+@media (min-height: 700px) {
+  #top-controls-backdoor {
+    padding: 24px 0;
+  }
+}
  
  @media (min-height: 700px) {
    #top-controls {
@@ -437,17 +454,21 @@
    }
  }
  
- #top-controls .container {
+ #top-controls .container,
+ #top-controls-backdoor .container {
    display: -webkit-box;
    display: -moz-box;
    display: -ms-flexbox;
    display: -webkit-flex;
    display: flex;
-   -webkit-justify-content: space-betweenspace-between;
+   -webkit-justify-content: space-between;
    justify-content: space-between;
+   margin-left: 10px;
+   margin-right: 10px;
  }
  
- #top-controls .timeline-controls {
+ #top-controls .timeline-controls, 
+ #top-controls-backdoor .timeline-controls {
    display: -webkit-box;
    display: -moz-box;
    display: -ms-flexbox;
@@ -457,6 +478,8 @@
    margin-right: 20px;
    width: 140px;
  }
+
+
  
  #play-pause-button .material-icons {
    color: white;
@@ -477,7 +500,8 @@
    display: inherit;
  }
  
- #top-controls .control {
+ #top-controls .control,
+ #top-controls-backdoor .control {
    flex-grow: 1;
    max-width: 180px;
    min-width: 110px;
@@ -486,7 +510,9 @@
  }
  
  #top-controls .control .label,
- #top-controls .control label {
+ #top-controls .control label,
+ #top-controls-backdoor .control .label,
+ #top-controls-backdoor .control label {
    color: #777;
    font-size: 13px;
    display: block;
@@ -494,17 +520,20 @@
    font-weight: 300;
  }
  
- #top-controls .control .value {
+ #top-controls .control .value,
+ #top-controls-backdoor .control .value {
    font-size: 24px;
    margin: 0;
    font-weight: 300;
  }
  
- #top-controls .control .select {
+ #top-controls .control .select,
+ #top-controls-backdoor .control .select {
    position: relative;
  }
  
- #top-controls .control select {
+ #top-controls .control select,
+ #top-controls-backdoor .control select {
    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
@@ -520,11 +549,13 @@
    outline: none;
  }
  
- #top-controls .control select:focus {
+ #top-controls .control select:focus,
+ #top-controls-backdoor .control select:focus {
    border-bottom-color: #183D4E;
  }
  
- #top-controls .control .select::after {
+ #top-controls .control .select::after,
+ #top-controls-backdoor .control .select::after {
    class: "material-icons";
    content: "arrow_drop_down";
    color: #999;

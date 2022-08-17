@@ -3,14 +3,14 @@
        <el-row>
              <el-col :span="12" :offset="6">
                  <h1 style="font-size:25px"><i class="el-icon-s-home" style="margin-right:20px"></i>Backdoor attack</h1>
-                 <p align="justify" style="margin:50px 0px">Backdoor attack
+                 <p align="justify" style="margin:50px 0px">
                  </p>
              </el-col>
         </el-row>
         <el-row>
-      <el-col :span="16" :offset="4">
+      <el-col :span="16" :offset="3">
         <!-- Top Controls -->
-        <div id="top-controls">
+        <div id="top-controls-backdoor">
           <div class="container">
             <div class="timeline-controls">
               <button class="mdl-button mdl-js-button mdl-button--icon ui-resetButton" id="reset-button"
@@ -27,26 +27,12 @@
               <label for="activations">Select Model</label>
               <div class="select">
                 <select id="activations">
-                  <option value="RELU">MNIST-RELU</option>
-                  <option value="SIGMOID">MNIST-SIGMOID</option>
-                  <option value="TANH">MNIST-TANH</option>
-                </select>
-              </div>
-            </div>
-            <div class="control ui-activation">
-              <label for="target">Trigger Target</label>
-              <div class="select">
-                <select id="activations">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="0">0</option>
+                  <option value="mnist-relu">MNIST-RELU</option>
+                  <option value="mnist-sig">MNIST-SIGMOID</option>
+                  <option value="mnist-tanh">MNIST-TANH</option>
+                  <option value="cifar-relu">CIFAR10-RELU</option>
+                  <option value="cifar-sig">CIFAR10-SIGMOID</option>
+                  <option value="cifar-tanh">CIFAR10-TANH</option>
                 </select>
               </div>
             </div>

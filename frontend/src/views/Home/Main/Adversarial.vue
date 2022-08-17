@@ -28,8 +28,8 @@
               <label for="attack_method">Attack Method</label>
               <div class="select">
                 <select id="attack_method">
-                  <option value="pgd">pgd</option>
-                  <option value="fgsm">fgsm</option>
+                  <option value="PGD">PGD</option>
+                  <option value="FGSM">FGSM</option>
                 </select>
               </div>
             </div>

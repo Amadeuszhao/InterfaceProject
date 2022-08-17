@@ -24,7 +24,8 @@
                 <label for="attack_method">Attack Method</label>
                 <div class="select">
                   <select id="attack_method">
-                    <option value="GreedyWordSwapWIR">GreedyWordSwapWIR</option>
+                    <option value="PGD">PGD</option>
+                    <option value="FGSM">FGSM</option>
                   </select>
                 </div>
               </div>
@@ -33,9 +34,6 @@
                 <div class="select">
                   <select id="sentence" @change="onChange($event)" v-model="sentenceSelected">
                     <option v-for="t in textData" v-bind:key="t.id" :value="t.name">{{t.subname}}</option>
-                    <option value="All tracks are perfect! Great music. This is a must album with such iconic hits. Seems like they never get old.">All tracks are perfect! Great...</option>
-                    <option value="I get a number of questions about this corpus each week, which I am unable to answer, mostly because they deal with preparation issues and such that I just don't know about. ">I get a number of questions...</option>
-                    <option value="Many of Shakespeare's plays were published in editions of varying quality and accuracy in his lifetime.">Many of Shakespeare's pla...</option>
                   </select>
                 </div>
               </div>
@@ -60,7 +58,7 @@
                 <el-input
                     type="textarea"
                     :rows="14"
-                    placeholder="input text message"
+                    placeholder="Input text message more than 10 characters"
                     v-model="textarea">
                 </el-input>
             </el-col>
@@ -116,7 +114,7 @@ export default {
   name: 'Textattack',
   data () {
     return {
-      textarea: 'This sentence is a simple place holder.',
+      textarea: '',
       attackedText: '',
       originalText: '',
       originalClass: '',
@@ -150,6 +148,9 @@ export default {
     },
     onClickGenerate () {
       const self = this
+      if (this.textarea.length < 10) {
+        return
+      }
       this.$axios.get('http://127.0.0.1:8000/api/text_attack/1', {})
         .then(function (res) {
           self.originalText = res.data.text
