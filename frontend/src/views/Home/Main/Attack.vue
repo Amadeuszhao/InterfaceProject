@@ -30,8 +30,8 @@ export default {
   },
   data () {
     return {
-      attackSelected: 0,
-      type1: '',
+      attackSelected: 1,
+      type1: 'primary',
       type2: '',
       type3: ''
     }

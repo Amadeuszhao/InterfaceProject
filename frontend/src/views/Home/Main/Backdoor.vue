@@ -150,7 +150,7 @@ export default {
   methods: {
     getAttackData () {
       const self = this
-      this.$axios.get('http://localhost:8000/api/backdoor_attack/1', {})
+      this.$axios.get('http://127.0.0.1:8000/api/backdoor_attack/1', {})
         .then(function (res) {
           self.image = res.data.image
           self.perturbation = res.data.perturbation

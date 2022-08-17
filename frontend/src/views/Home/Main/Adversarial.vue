@@ -189,7 +189,7 @@ export default {
     getAttackData () {
       /* 'https://fa12-219-74-123-206.ap.ngrok.io/api/adversarial_attack/2' */
       const self = this
-      this.$axios.get('http://localhost:8000/api/adversarial_attack/1', {})
+      this.$axios.get('http://127.0.0.1:8000/api/adversarial_attack/2', {})
         .then(function (res) {
           console.log(res.data.attack_image)
           self.original_image = res.data.image

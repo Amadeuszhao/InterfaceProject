@@ -67,8 +67,6 @@
         </el-row>
         <el-row  style="margin-top: 20px">
             <el-col :span="12" :offset="6">
-              <div id="main-part">
-
               <!--  Data Column-->
                 <div class="column sentence" v-if="isGenerated">
                 <h4>
@@ -86,6 +84,11 @@
                  </p>
                 </div>
                 </div>
+            </el-col>
+        </el-row>
+        <el-row  style="margin-top: 20px">
+            <el-col :span="12" :offset="6">
+              <!--  Data Column-->
                 <div class="column sentence" v-if="isGenerated">
                 <h4>
                   <span>Attacked</span>
@@ -100,7 +103,6 @@
                 <div class="ui-sentence" style="margin-top: 20px">
                   <p align="justify" class="plaintext">Target: {{attackedClass}}
                  </p>
-                </div>
                 </div>
                 </div>
             </el-col>
@@ -148,12 +150,12 @@ export default {
     },
     onClickGenerate () {
       const self = this
-      this.$axios.get('http://localhost:8000/api/text_attack/1', {})
+      this.$axios.get('http://127.0.0.1:8000/api/text_attack/1', {})
         .then(function (res) {
-          self.originalText = res.text
-          self.attackedText = res.attack_text
-          self.originalClass = res.text_class
-          self.attackedClass = res.attack_class
+          self.originalText = res.data.text
+          self.attackedText = res.data.attack_text
+          self.originalClass = res.data.text_class
+          self.attackedClass = res.data.attack_class
         })
         .then(function () {
           self.isGenerated = true

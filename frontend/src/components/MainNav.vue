@@ -2,8 +2,8 @@
     <div class='nav'>
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router>
             <el-menu-item index="/welcome">Welcome</el-menu-item>
-            <el-menu-item index="/Verify">Model Verification</el-menu-item>
-            <el-menu-item index="/attack">Model Attack</el-menu-item>
+            <el-menu-item index="/attack">Model Evaluation</el-menu-item>
+            <el-menu-item index="/verify">Model Verification</el-menu-item>
             <!-- <el-submenu index="/image">
                 <template slot="title">Model Attack</template>
                 <el-menu-item index="/adversarial">adversarial attack</el-menu-item>
@@ -11,7 +11,7 @@
                 <el-menu-item index="/text">text attack</el-menu-item>
             </el-submenu> -->
             <el-submenu index="/repair">
-                <template slot="title">Model Repair</template>
+                <template slot="title">Model Mitigation</template>
                 <el-menu-item index="/demo">Demo</el-menu-item>
             </el-submenu>
             <el-menu-item index="/project">About Us</el-menu-item>
