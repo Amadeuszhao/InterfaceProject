@@ -18,8 +18,8 @@ export default {
   data () {
     return {
       whattype: [
-        { pic_src: '@/assets/pics/adversarial.png', title: 'adversarial attack', describe: 'adversarial attack for image models', route: '/adversarial', icon: 'el-icon-user-solid' },
-        { pic_src: '@/assets/pics/backdoor.png', title: 'backdoor attack', describe: 'backdoor attack for image models', route: '/house', icon: 'el-icon-s-home' }
+        { pic_src: '@/assets/pics/adversarial.png', title: 'adversarial attack', describe: 'adversarial attack for image models', route: '/attack', icon: 'el-icon-user-solid' },
+        { pic_src: '@/assets/pics/backdoor.png', title: 'backdoor attack', describe: 'backdoor attack for image models', route: '/attack', icon: 'el-icon-s-home' }
       ],
       picsrc: null
     }

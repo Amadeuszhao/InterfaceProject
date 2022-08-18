@@ -51,7 +51,7 @@
           </el-col>
         </el-row>
         <el-row  style="margin-top: 20px">
-            <el-col :span="12" :offset="6"><el-button type="primary" style="float:left" @click="onClickGenerate()">generate</el-button></el-col>
+            <el-col :span="12" :offset="6"><el-button type="primary" style="float:left" @click="onClickGenerate" v-loading.fullscreen.lock="loading">{{textButton}}</el-button></el-col>
         </el-row>
         <el-row style="margin-top: 20px">
             <el-col :span="12" :offset="6">
@@ -71,14 +71,14 @@
                   <span>Original</span>
                 </h4>
                 <div class="ui-sentence">
-                  <p align="justify">Demonstration of original sentence and target result</p>
+                  <p align="justify" style="color: #777">Demonstration of original sentence and target result</p>
                 </div>
                 <div class="ui-sentence">
-                  <p align="justify" class="plaintext">{{originalText}}
+                  <p align="justify">{{originalText}}
                  </p>
                 </div>
                 <div class="ui-sentence" style="margin-top: 20px">
-                  <p align="justify" class="plaintext">Target: {{originalClass}}
+                  <p align="justify" style="font-weight: bold;">Target: {{originalClass}}
                  </p>
                 </div>
                 </div>
@@ -92,14 +92,14 @@
                   <span>Attacked</span>
                 </h4>
                 <div class="ui-sentence">
-                  <p align="justify">Demonstration of the sentence after attack and target result</p>
+                  <p align="justify" style="color: #777">Demonstration of the sentence after attack and target result</p>
                 </div>
                 <div class="ui-sentence">
-                  <p align="justify" class="plaintext">{{attackedText}}
+                  <p align="justify">{{attackedText}}
                  </p>
                 </div>
                 <div class="ui-sentence" style="margin-top: 20px">
-                  <p align="justify" class="plaintext">Target: {{attackedClass}}
+                  <p align="justify" style="font-weight: bold;">Target: {{attackedClass}}
                  </p>
                 </div>
                 </div>
@@ -115,6 +115,7 @@ export default {
   data () {
     return {
       textarea: '',
+      textButton: 'generate',
       attackedText: '',
       originalText: '',
       originalClass: '',
@@ -136,7 +137,8 @@ export default {
       target: this.baseVPN(),
       graphData: {},
       myGraphChart: null,
-      isGenerated: false
+      isGenerated: false,
+      loading: false
     }
   },
   mounted () {
@@ -151,7 +153,8 @@ export default {
       if (this.textarea.length < 10) {
         return
       }
-      this.$axios.get('http://127.0.0.1:8000/api/text_attack/1', {})
+      this.loading = true
+      this.$axios.post('http://127.0.0.1:8000/api/text_attack', { text: this.textarea })
         .then(function (res) {
           self.originalText = res.data.text
           self.attackedText = res.data.attack_text
@@ -160,8 +163,10 @@ export default {
         })
         .then(function () {
           self.isGenerated = true
+          self.loading = false
         }).catch(function (err) {
           console.log(err)
+          self.loading = false
         })
     },
     getdata () {

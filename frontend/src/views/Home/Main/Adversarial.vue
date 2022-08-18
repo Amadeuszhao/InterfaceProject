@@ -112,12 +112,12 @@
             <div class="ui-dataset">
               <p>Demonstration of original image</p>
             </div>
-            <div>
             <div v-if="show_image==true">
+            <div style="margin-top: 10px">
               <img v-bind:src="original_image"/>
             </div>
-            <div>
-              <p>image class: {{image_class}}</p>
+            <div style="margin-top: 10px">
+              <p style="font-weight: bold;">image class: {{image_class}}</p>
             </div>
             </div>
           </div>
@@ -129,11 +129,11 @@
               <p>Demonstration of perturbation</p>
             </div>
             <div v-if="show_image==true">
-            <div>
+            <div style="margin-top: 10px">
               <img v-bind:src="perturbation"/>
             </div>
-            <div>
-              <p>perturbation class: {{perturbation_class}}</p>
+            <div style="margin-top: 10px">
+              <p style="font-weight: bold;">perturbation class: {{perturbation_class}}</p>
             </div>
             </div>
           </div>
@@ -145,11 +145,11 @@
               <p>Demonstration of attack</p>
             </div>
             <div v-if="show_image==true">
-            <div>
+            <div style="margin-top: 10px">
               <img v-bind:src="attack_image"/>
             </div>
-            <div>
-              <p>attack class: {{attack_class}}</p>
+            <div style="margin-top: 10px">
+              <p style="font-weight: bold;">attack class: {{attack_class}}</p>
             </div>
             </div>
           </div>

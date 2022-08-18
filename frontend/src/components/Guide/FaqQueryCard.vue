@@ -19,7 +19,7 @@ export default {
     return {
       whattype: [
         { title: 'AI verification', describe: 'AI verification', route: '/verify', icon: 'el-icon-chat-line-round' },
-        { title: 'Text attack', describe: 'text related attack', route: '/text', icon: 'el-icon-search' }
+        { title: 'Text attack', describe: 'text related attack', route: '/attack', icon: 'el-icon-search' }
       ],
       picsrc: null
     }

@@ -10,33 +10,29 @@
         <!-- Image attack -->
         <el-row>
            <el-col :span="24">
-               <h1 class="guide"><i class="el-icon-data-line guide"></i>Image attack</h1>
+               <h1 class="guide"><i class="el-icon-data-line guide"></i>Model Evaluation</h1>
            </el-col>
         </el-row>
         <el-row>
            <el-col :span="6" :offset="3"><StatisCard :type=type_0></StatisCard></el-col>
            <el-col :span="6" :offset="6"><StatisCard :type=type_1></StatisCard></el-col>
         </el-row>
-        <!-- Model Repair -->
-        <el-row>
-           <el-col :span="24"><h1 class="guide"><i class="el-icon-view"></i>Model Repair</h1></el-col>
-        </el-row>
-        <el-row>
-           <el-col :span="8" :offset="8"><VisualCard :type=type_0></VisualCard></el-col>
+        <el-row style="margin-top: 30px">
+           <el-col :span="6" :offset="9"><FaqQueryCard :type=type_1></FaqQueryCard></el-col>
         </el-row>
         <!-- AI Verification -->
         <el-row>
-           <el-col :span="24"><h1 class="guide"><i class="el-icon-chat-dot-round"></i>AI Verification</h1></el-col>
+           <el-col :span="24"><h1 class="guide"><i class="el-icon-chat-dot-round"></i>Model Verification</h1></el-col>
         </el-row>
         <el-row>
            <el-col :span="8" :offset="8"><FaqQueryCard :type=type_0></FaqQueryCard></el-col>
         </el-row>
-        <!-- Text Attack -->
+        <!-- Model Repair -->
         <el-row>
-           <el-col :span="24"><h1 class="guide"><i class="el-icon-search"></i>Text Attack</h1></el-col>
+           <el-col :span="24"><h1 class="guide"><i class="el-icon-view"></i>Model Mitigation</h1></el-col>
         </el-row>
         <el-row>
-           <el-col :span="8" :offset="8"><FaqQueryCard :type=type_1></FaqQueryCard></el-col>
+           <el-col :span="8" :offset="8"><VisualCard :type=type_0></VisualCard></el-col>
         </el-row>
     </div>
 </template>
