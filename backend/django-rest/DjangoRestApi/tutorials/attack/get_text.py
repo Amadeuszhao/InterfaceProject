@@ -52,4 +52,8 @@ def get_text(text):
   output = attack.goal_function.get_output(example)
   result = attack.attack(example, output)
   # print(result)
-  return str(result)
+  origin_class = str(result).split('\n')[0].split('-->')[0]
+  attack_class = str(result).split('\n')[0].split('-->')[1]
+  origin_sentence = str(result).split('\n')[2]
+  attack_sentence = str(result).split('\n')[4]
+  return origin_class,attack_class ,origin_sentence,attack_sentence 

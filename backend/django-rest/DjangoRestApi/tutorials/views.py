@@ -99,8 +99,11 @@ def text_attack_generate(request):
     elif request.method == 'POST':
         attack = JSONParser().parse(request)
         text_message = attack['text']
-        result_text = get_text(text_message)
-        attack["attack_text"] = result_text
+        origin_class,attack_class ,origin_sentence,attack_sentence  = get_text(text_message)
+        attack["text"] = origin_sentence
+        attack['attack_text'] = attack_sentence
+        attack['text_class'] = origin_class
+        attack['attack_class'] = attack_class
         text_serializer = TextAttackSerializer(data=attack)
         if text_serializer.is_valid():
             text_serializer.save()
