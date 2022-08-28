@@ -114,7 +114,7 @@
             </div>
             <div v-if="show_image==true">
             <div style="margin-top: 10px">
-              <img v-bind:src="original_image"/>
+              <img style="width: 200px; height: 200px" v-bind:src="original_image"/>
             </div>
             <div style="margin-top: 10px">
               <p style="font-weight: bold;">image class: {{image_class}}</p>
@@ -130,7 +130,7 @@
             </div>
             <div v-if="show_image==true">
             <div style="margin-top: 10px">
-              <img v-bind:src="perturbation"/>
+              <img style="width: 200px; height: 200px" v-bind:src="perturbation"/>
             </div>
             <div style="margin-top: 10px">
               <p style="font-weight: bold;">perturbation class: {{perturbation_class}}</p>
@@ -146,7 +146,7 @@
             </div>
             <div v-if="show_image==true">
             <div style="margin-top: 10px">
-              <img v-bind:src="attack_image"/>
+              <img style="width: 200px; height: 200px" v-bind:src="attack_image"/>
             </div>
             <div style="margin-top: 10px">
               <p style="font-weight: bold;">attack class: {{attack_class}}</p>
@@ -164,6 +164,7 @@ export default {
   name: 'Adversarial',
   data () {
     return {
+      base64: '',
       asset: asset,
       original_image: '',
       perturbation: '',
@@ -188,10 +189,10 @@ export default {
   methods: {
     getAttackData () {
       /* 'https://fa12-219-74-123-206.ap.ngrok.io/api/adversarial_attack/2' */
+      this.postAttack()
       const self = this
       this.$axios.get('http://127.0.0.1:8000/api/adversarial_attack/2', {})
         .then(function (res) {
-          console.log(res.data.attack_image)
           self.original_image = res.data.image
           self.perturbation = res.data.perturbation
           self.attack_image = res.data.attack_image
@@ -204,6 +205,27 @@ export default {
         }).catch(function (err) {
           console.log(err)
         })
+    },
+    postAttack () {
+      var img = document.createElement('img')
+      img.src = require('./assets/2.png')
+      console.log(img)
+      // const self = this
+      // this.$axios.post('http://127.0.0.1:8000/api/adversarial_attack', { image: file })
+      //   .then(function (res) {
+      //     console.log(res.data.attack_image)
+      //     self.original_image = res.data.image
+      //     self.perturbation = res.data.perturbation
+      //     self.attack_image = res.data.attack_image
+      //     self.image_class = res.data.image_class
+      //     self.perturbation_class = res.data.perturbation_class
+      //     self.attack_class = res.data.attack_class
+      //   })
+      //   .then(() => {
+      //     self.show_image = true
+      //   }).catch(function (err) {
+      //     console.log(err)
+      //   })
     }
   }
 }

@@ -78,7 +78,7 @@
                  </p>
                 </div>
                 <div class="ui-sentence" style="margin-top: 20px">
-                  <p align="justify" style="font-weight: bold;">Target: {{originalClass}}
+                  <p align="justify" style="font-weight: bold; color: forestgreen">Target: positive {{originalClass}}
                  </p>
                 </div>
                 </div>
@@ -99,7 +99,7 @@
                  </p>
                 </div>
                 <div class="ui-sentence" style="margin-top: 20px">
-                  <p align="justify" style="font-weight: bold;">Target: {{attackedClass}}
+                  <p align="justify" style="font-weight: bold; color: red">Target: negative {{attackedClass}}
                  </p>
                 </div>
                 </div>

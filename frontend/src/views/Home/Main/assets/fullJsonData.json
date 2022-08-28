@@ -1,0 +1,859 @@
+{
+    "Census Income": {
+        "Scores": {
+            "Fairness Score-Race": [
+                "4.31%",
+                "1.19%"
+            ],
+            "Accuracy-Race": [
+                "88%",
+                "85%"
+            ],
+            "Fairness Score-Age": [
+                "3.31%",
+                "2.30%"
+            ],
+            "Accuracy-Age": [
+                "88%",
+                "86%"
+            ],
+            "Fairness Score-Gender": [
+                "1.30%",
+                "0.70%"
+            ],
+            "Accuracy-Gender": [
+                "88%",
+                "86%"
+            ]
+        },
+        "model_name": "6-layer FFNN",
+        "layer_names": [
+            "Input",
+            "FFNN1",
+            "FFNN2",
+            "FFNN3",
+            "FFNN4",
+            "FFNN5",
+            "Output"
+        ],
+        "layers": {
+            "Input": {
+                "layer_size": 16,
+                "guilty": false
+            },
+            "FFNN1": {
+                "layer_size": 64,
+                "guilty": true,
+                "data": [
+                    0.88,
+                    0.75,
+                    0.69,
+                    0.65,
+                    0.51,
+                    0.01
+                ]
+            },
+            "FFNN2": {
+                "layer_size": 32,
+                "guilty": true,
+                "data": [
+                    0.95,
+                    0.85,
+                    0.79,
+                    0.68,
+                    0.56,
+                    0.02
+                ]
+            },
+            "FFNN3": {
+                "layer_size": 16,
+                "guilty": true,
+                "data": [
+                    0.68,
+                    0.65,
+                    0.59,
+                    0.55,
+                    0.55,
+                    0.05
+                ]
+            },
+            "FFNN4": {
+                "layer_size": 8,
+                "guilty": true,
+                "data": [
+                    0.98,
+                    0.95,
+                    0.79,
+                    0.65,
+                    0.58,
+                    0.01
+                ]
+            },
+            "FFNN5": {
+                "layer_size": 4,
+                "guilty": true,
+                "data": [
+                    0.23,
+                    0.15,
+                    0.02,
+                    0.05
+                ]
+            },
+            "Output": {
+                "layer_size": 2,
+                "guilty": false
+            }
+        }
+    },
+    "German Credit": {
+        "Scores": {
+            "Fairness Score-Age": [
+                "6.59%",
+                "0.05%"
+            ],
+            "Accuracy-Age": [
+                "100%",
+                "100%"
+            ],
+            "Fairness Score-Gender": [
+                "5.24%",
+                "3.74%"
+            ],
+            "Accuracy-Gender": [
+                "100%",
+                "100%"
+            ]
+        },
+        "model_name": "6-layer FFNN",
+        "layer_names": [
+            "Input",
+            "FFNN1",
+            "FFNN2",
+            "FFNN3",
+            "FFNN4",
+            "FFNN5",
+            "Output"
+        ],
+        "layers": {
+            "Input": {
+                "layer_size": 16,
+                "guilty": false
+            },
+            "FFNN1": {
+                "layer_size": 64,
+                "guilty": true,
+                "data": [
+                    0.98,
+                    0.85,
+                    0.69,
+                    0.65,
+                    0.61,
+                    0.01
+                ]
+            },
+            "FFNN2": {
+                "layer_size": 32,
+                "guilty": true,
+                "data": [
+                    0.92,
+                    0.85,
+                    0.79,
+                    0.68,
+                    0.55,
+                    0.02
+                ]
+            },
+            "FFNN3": {
+                "layer_size": 16,
+                "guilty": true,
+                "data": [
+                    0.78,
+                    0.65,
+                    0.59,
+                    0.55,
+                    0.53,
+                    0.05
+                ]
+            },
+            "FFNN4": {
+                "layer_size": 8,
+                "guilty": true,
+                "data": [
+                    0.96,
+                    0.95,
+                    0.77,
+                    0.65,
+                    0.51,
+                    0.01
+                ]
+            },
+            "FFNN5": {
+                "layer_size": 4,
+                "guilty": true,
+                "data": [
+                    0.28,
+                    0.15,
+                    0.02,
+                    0.05
+                ]
+            },
+            "Output": {
+                "layer_size": 2,
+                "guilty": false
+            }
+        }
+    },
+    "Bank Marketing": {
+        "Scores": {
+            "Fairness Score-Age": [
+                "5.44%",
+                "0.28%"
+            ],
+            "Accuracy-Age": [
+                "92%",
+                "91%"
+            ]
+        },
+        "model_name": "6-layer FFNN",
+        "layer_names": [
+            "Input",
+            "FFNN1",
+            "FFNN2",
+            "FFNN3",
+            "FFNN4",
+            "FFNN5",
+            "Output"
+        ],
+        "layers": {
+            "Input": {
+                "layer_size": 16,
+                "guilty": false
+            },
+            "FFNN1": {
+                "layer_size": 64,
+                "guilty": true,
+                "data": [
+                    0.87,
+                    0.85,
+                    0.79,
+                    0.65,
+                    0.62,
+                    0.01
+                ]
+            },
+            "FFNN2": {
+                "layer_size": 32,
+                "guilty": true,
+                "data": [
+                    0.92,
+                    0.85,
+                    0.79,
+                    0.65,
+                    0.55,
+                    0.02
+                ]
+            },
+            "FFNN3": {
+                "layer_size": 16,
+                "guilty": true,
+                "data": [
+                    0.79,
+                    0.65,
+                    0.59,
+                    0.55,
+                    0.52,
+                    0.05
+                ]
+            },
+            "FFNN4": {
+                "layer_size": 8,
+                "guilty": true,
+                "data": [
+                    0.99,
+                    0.95,
+                    0.77,
+                    0.65,
+                    0.51,
+                    0.01
+                ]
+            },
+            "FFNN5": {
+                "layer_size": 4,
+                "guilty": true,
+                "data": [
+                    0.87,
+                    0.34,
+                    0.22,
+                    0.15
+                ]
+            },
+            "Output": {
+                "layer_size": 2,
+                "guilty": false
+            }
+        }
+    },
+    "German Traffic Sign Benchmark": {
+        "Scores": {
+            "Attack SR": [
+                "98.08%",
+                "0%"
+            ],
+            "Accuracy": [
+                "96.57%",
+                "96.54%"
+            ]
+        },
+        "model_name": "CNN",
+        "layer_names": [
+            "Input",
+            "Conv1",
+            "Conv2",
+            "Maxpool1",
+            "Conv3",
+            "Conv4",
+            "Maxpool2",
+            "Conv5",
+            "Conv6",
+            "Maxpool3",
+            "Flattern",
+            "Dense1",
+            "Dense2"
+        ],
+        "layers": {
+            "Input": {
+                "layer_size": 3072,
+                "guilty": false
+            },
+            "Conv1": {
+                "layer_size": 32768,
+                "guilty": false
+            },
+            "Conv2": {
+                "layer_size": 28800,
+                "guilty": false
+            },
+            "Maxpool1": {
+                "layer_size": 7200,
+                "guilty": false
+            },
+            "Conv3": {
+                "layer_size": 14400,
+                "guilty": false
+            },
+            "Conv4": {
+                "layer_size": 10816,
+                "guilty": false
+            },
+            "Maxpool2": {
+                "layer_size": 2304,
+                "guilty": false
+            },
+            "Conv5": {
+                "layer_size": 4608,
+                "guilty": false
+            },
+            "Conv6": {
+                "layer_size": 2048,
+                "guilty": false
+            },
+            "Maxpool3": {
+                "layer_size": 512,
+                "guilty": false
+            },
+            "Flattern": {
+                "layer_size": 512,
+                "guilty": false
+            },
+            "Dense1": {
+                "layer_size": 512,
+                "guilty": true,
+                "data": [
+                    0.98,
+                    0.85,
+                    0.69,
+                    0.65,
+                    0.61,
+                    0.01
+                ]
+            },
+            "Dense2": {
+                "layer_size": 43,
+                "guilty": true,
+                "data": [
+                    0.92,
+                    0.85,
+                    0.79,
+                    0.68,
+                    0.55,
+                    0.02
+                ]
+            }
+        }
+    },
+    "MNIST": {
+        "Scores": {
+            "Attack SR": [
+                "98.68%",
+                "0%"
+            ],
+            "Accuracy": [
+                "99.09%",
+                "98.67%"
+            ]
+        },
+        "model_name": "CNN",
+        "layer_names": [
+            "Input",
+            "Conv1",
+            "Maxpool1",
+            "DropOut1",
+            "Conv2",
+            "Maxpool2",
+            "DropOut2",
+            "Flattern",
+            "Dense1",
+            "DropOut3",
+            "Dense2"
+        ],
+        "layers": {
+            "Input": {
+                "layer_size": 784
+            },
+            "Conv1": {
+                "layer_size": 12544,
+                "guilty": false
+            },
+            "Maxpool1": {
+                "layer_size": 3136,
+                "guilty": false
+            },
+            "DropOut1": {
+                "layer_size": 3136,
+                "guilty": false
+            },
+            "Conv2": {
+                "layer_size": 6272,
+                "guilty": false
+            },
+            "Maxpool2": {
+                "layer_size": 1568,
+                "guilty": false
+            },
+            "DropOut2": {
+                "layer_size": 1568,
+                "guilty": false
+            },
+            "Flattern": {
+                "layer_size": 1568,
+                "guilty": false
+            },
+            "Dense1": {
+                "layer_size": 512,
+                "guilty": true,
+                "data": [
+                    0.88,
+                    0.75,
+                    0.69,
+                    0.65,
+                    0.61,
+                    0.01
+                ]
+            },
+            "DropOut3": {
+                "layer_size": 512,
+                "guilty": false
+            },
+            "Dense2": {
+                "layer_size": 10,
+                "guilty": true,
+                "data": [
+                    0.92,
+                    0.85,
+                    0.79,
+                    0.58,
+                    0.55,
+                    0.02
+                ]
+            }
+        }
+    },
+    "Fashion-MNIST": {
+        "Scores": {
+            "Attack SR": [
+                "99.77%",
+                "0.07%"
+            ],
+            "Accuracy": [
+                "91.36%",
+                "91.99%"
+            ]
+        },
+        "model_name": "CNN",
+        "layer_names": [
+            "Input",
+            "Conv1",
+            "Maxpool1",
+            "DropOut1",
+            "Conv2",
+            "Maxpool2",
+            "DropOut2",
+            "Conv3",
+            "Maxpool3",
+            "DropOut3",
+            "Flattern",
+            "Dense1",
+            "DropOut4",
+            "Dense2"
+        ],
+        "layers": {
+            "Input": {
+                "layer_size": 784
+            },
+            "Conv1": {
+                "layer_size": 25088,
+                "guilty": false
+            },
+            "Maxpool1": {
+                "layer_size": 6272,
+                "guilty": false
+            },
+            "DropOut1": {
+                "layer_size": 6272,
+                "guilty": false
+            },
+            "Conv2": {
+                "layer_size": 12544,
+                "guilty": false
+            },
+            "Maxpool2": {
+                "layer_size": 3136,
+                "guilty": false
+            },
+            "DropOut2": {
+                "layer_size": 3136,
+                "guilty": false
+            },
+            "Conv3": {
+                "layer_size": 6272,
+                "guilty": false
+            },
+            "Maxpool3": {
+                "layer_size": 1152,
+                "guilty": false
+            },
+            "DropOut3": {
+                "layer_size": 1152,
+                "guilty": false
+            },
+            "Flattern": {
+                "layer_size": 1152,
+                "guilty": false
+            },
+            "Dense1": {
+                "layer_size": 128,
+                "guilty": true,
+                "data": [
+                    0.88,
+                    0.75,
+                    0.69,
+                    0.65,
+                    0.61,
+                    0.01
+                ]
+            },
+            "DropOut4": {
+                "layer_size": 128,
+                "guilty": false
+            },
+            "Dense2": {
+                "layer_size": 10,
+                "guilty": true,
+                "data": [
+                    0.62,
+                    0.55,
+                    0.49,
+                    0.48,
+                    0.45,
+                    0.02
+                ]
+            }
+        }
+    },
+    "ACAS N2,9": {
+        "Scores": {
+            "Counterexample VR": [
+                "100%",
+                "0.65%"
+            ],
+            "Drawndown VR": [
+                "0%",
+                "0%"
+            ]
+        },
+        "model_name": "ACAS XU",
+        "layer_names": [
+            "Input",
+            "FFNN1",
+            "FFNN2",
+            "FFNN3",
+            "FFNN4",
+            "FFNN5",
+            "Output"
+        ],
+        "layers": {
+            "Input": {
+                "layer_size": 5,
+                "guilty": false
+            },
+            "FFNN1": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.88,
+                    0.75,
+                    0.69,
+                    0.65,
+                    0.51,
+                    0.01
+                ]
+            },
+            "FFNN2": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.61,
+                    0.55,
+                    0.49,
+                    0.48,
+                    0.46,
+                    0.02
+                ]
+            },
+            "FFNN3": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.69,
+                    0.65,
+                    0.59,
+                    0.55,
+                    0.55,
+                    0.05
+                ]
+            },
+            "FFNN4": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.98,
+                    0.95,
+                    0.79,
+                    0.65,
+                    0.58,
+                    0.01
+                ]
+            },
+            "FFNN5": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.86,
+                    0.54,
+                    0.49,
+                    0.17,
+                    0.02,
+                    0.01
+                ]
+            },
+            "Output": {
+                "layer_size": 5,
+                "guilty": false
+            }
+        }
+    },
+    "ACAS N3,3": {
+        "Scores": {
+            "Counterexample VR": [
+                "100%",
+                "0%"
+            ],
+            "Drawndown VR": [
+                "0%",
+                "0%"
+            ]
+        },
+        "model_name": "ACAS XU",
+        "layer_names": [
+            "Input",
+            "FFNN1",
+            "FFNN2",
+            "FFNN3",
+            "FFNN4",
+            "FFNN5",
+            "Output"
+        ],
+        "layers": {
+            "Input": {
+                "layer_size": 5,
+                "guilty": false
+            },
+            "FFNN1": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.88,
+                    0.75,
+                    0.69,
+                    0.65,
+                    0.51,
+                    0.01
+                ]
+            },
+            "FFNN2": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.81,
+                    0.75,
+                    0.69,
+                    0.58,
+                    0.46,
+                    0.02
+                ]
+            },
+            "FFNN3": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.89,
+                    0.75,
+                    0.69,
+                    0.55,
+                    0.55,
+                    0.05
+                ]
+            },
+            "FFNN4": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.98,
+                    0.95,
+                    0.79,
+                    0.65,
+                    0.58,
+                    0.01
+                ]
+            },
+            "FFNN5": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.54,
+                    0.45,
+                    0.29,
+                    0.17,
+                    0.09,
+                    0.05
+                ]
+            },
+            "Output": {
+                "layer_size": 5,
+                "guilty": false
+            }
+        }
+    },
+    "ACAS N1,9": {
+        "Scores": {
+            "Counterexample VR": [
+                "100%",
+                "0.01%"
+            ],
+            "Drawndown VR": [
+                "0%",
+                "0%"
+            ]
+        },
+        "model_name": "ACAS XU",
+        "layer_names": [
+            "Input",
+            "FFNN1",
+            "FFNN2",
+            "FFNN3",
+            "FFNN4",
+            "FFNN5",
+            "Output"
+        ],
+        "layers": {
+            "Input": {
+                "layer_size": 5,
+                "guilty": false
+            },
+            "FFNN1": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.98,
+                    0.75,
+                    0.69,
+                    0.65,
+                    0.51,
+                    0.01
+                ]
+            },
+            "FFNN2": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.91,
+                    0.55,
+                    0.49,
+                    0.48,
+                    0.46,
+                    0.02
+                ]
+            },
+            "FFNN3": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.69,
+                    0.62,
+                    0.59,
+                    0.55,
+                    0.55,
+                    0.05
+                ]
+            },
+            "FFNN4": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.98,
+                    0.95,
+                    0.79,
+                    0.65,
+                    0.58,
+                    0.01
+                ]
+            },
+            "FFNN5": {
+                "layer_size": 50,
+                "guilty": true,
+                "data": [
+                    0.29,
+                    0.21,
+                    0.20,
+                    0.17,
+                    0.02,
+                    0.01
+                ]
+            },
+            "Output": {
+                "layer_size": 5,
+                "guilty": false
+            }
+        }
+    }
+}

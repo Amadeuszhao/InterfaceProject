@@ -80,10 +80,10 @@
             </div>
             <div v-if="show_image==true" style="margin-top: 20px">
             <div>
-              <img v-bind:src="image" width="100%"/>
+              <img style="width: 200px; height: 200px" v-bind:src="image"/>
             </div>
             <div style="margin-top: 20px">
-              <p>image class: {{image_class}}</p>
+              <p style="font-weight: bold;">image class: {{image_class}}</p>
             </div>
             </div>
           </div>
@@ -96,10 +96,10 @@
             </div>
             <div v-if="show_image==true" style="margin-top: 20px">
             <div>
-              <img v-bind:src="attack_image" width="100%"/>
+              <img style="width: 200px; height: 200px" v-bind:src="attack_image"/>
             </div>
             <div style="margin-top: 20px">
-              <p>attack class: {{attack_class}}</p>
+              <p style="font-weight: bold;">attack class: {{attack_class}}</p>
             </div>
             </div>
           </div>
