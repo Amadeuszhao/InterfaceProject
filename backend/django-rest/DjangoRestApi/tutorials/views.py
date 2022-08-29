@@ -7,7 +7,7 @@ from rest_framework import status
 from tutorials.attack.adversarial_attack import *
 from tutorials.attack.get_text import get_text
 
-from tutorials.models import Tutorial,AdversarialAttack,TextAttack
+from tutorials.models import Tutorial,AdversarialAttack,TextAttack,ModelVerify,BackdoorAttack
 from tutorials.serializers import *
 from rest_framework.decorators import api_view
 
@@ -178,3 +178,26 @@ def tutorial_list_published(request):
         tutorials_serializer = TutorialSerializer(tutorials, many=True)
         return JsonResponse(tutorials_serializer.data, safe=False)
     
+@api_view(['GET','POST'])
+def model_verify_generate(request):
+    if request.method == 'GET':
+        verify = ModelVerify.objects.all()
+        verify_serializer = VerificationSerializer(verify, many=True)
+        return JsonResponse(verify_serializer.data, safe=False)
+    elif request.method == 'POST':
+        attack = JSONParser().parse(request)
+        verify_serializer = VerificationSerializer(data=attack)
+        if verify_serializer.is_valid():
+            verify_serializer.save()
+            return JsonResponse(verify_serializer.data, status=status.HTTP_201_CREATED) 
+        return JsonResponse(verify_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+@api_view(['GET'])
+def model_verify_detail(request,pk):
+    try: 
+        verify = BackdoorAttack.objects.get(pk=pk) 
+    except BackdoorAttack.DoesNotExist: 
+        return JsonResponse({'message': 'The image does not exist'}, status=status.HTTP_404_NOT_FOUND) 
+    if request.method == 'GET': 
+        verify_serializer = VerificationSerializer(verify)
+        return JsonResponse(verify_serializer.data) 

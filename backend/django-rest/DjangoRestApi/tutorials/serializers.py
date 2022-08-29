@@ -1,5 +1,5 @@
 from rest_framework import serializers 
-from tutorials.models import Tutorial, AdversarialAttack,BackdoorAttack,TextAttack
+from tutorials.models import Tutorial, AdversarialAttack,BackdoorAttack,TextAttack,ModelVerify
  
  
 class TutorialSerializer(serializers.ModelSerializer):
@@ -52,4 +52,19 @@ class TextAttackSerializer(serializers.ModelSerializer):
                   'attack_class',
                   'dataset',
                   'model',
+                )
+
+class VerificationSerializer(serializers.ModelSerializer):
+ 
+    class Meta:
+        model = ModelVerify
+        fields = ('id',
+                  'model',
+                  'input',
+                  'auxiliary_variables',
+                  'verified_output',
+                  'Verified',
+                  'Falsified',
+                  'Time',
+                  'Timeout',
                 )

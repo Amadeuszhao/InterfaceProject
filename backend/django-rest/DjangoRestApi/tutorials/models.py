@@ -34,3 +34,12 @@ class TextAttack(models.Model):
     dataset = models.CharField(max_length=60,blank=False,default='imdb' )
     model = models.CharField(max_length=60,blank=False,default='lstm' )
 
+class ModelVerify(models.Model):
+    model = models.CharField(max_length=60,blank=False,default='LeNet' )
+    input = models.CharField(max_length=70,blank=False,default='pgd')
+    auxiliary_variables= models.CharField(max_length=1000000000000000000,blank=False, default='305')
+    verified_output = models.CharField(max_length=1000000000000000000,blank=False, default='')
+    Verified = models.CharField(max_length=60,blank=False,default='4' )
+    Falsified = models.CharField(max_length=60,blank=False,default='imdb' )
+    Time = models.CharField(max_length=60,blank=False,default='lstm' )
+    Timeout = models.CharField(max_length=60,blank=False,default='lstm')
