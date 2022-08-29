@@ -14,11 +14,11 @@
            </el-col>
         </el-row>
         <el-row>
-           <el-col :span="6" :offset="3"><StatisCard :type=type_0></StatisCard></el-col>
-           <el-col :span="6" :offset="6"><StatisCard :type=type_1></StatisCard></el-col>
+           <el-col :span="6" :offset="2"><StatisCard :type=type_0></StatisCard></el-col>
+           <el-col :span="6" :offset="1"><StatisCard :type=type_1></StatisCard></el-col>
+           <el-col :span="6" :offset="1"><FaqQueryCard :type=type_1></FaqQueryCard></el-col>
         </el-row>
         <el-row style="margin-top: 30px">
-           <el-col :span="6" :offset="9"><FaqQueryCard :type=type_1></FaqQueryCard></el-col>
         </el-row>
         <!-- AI Verification -->
         <el-row>

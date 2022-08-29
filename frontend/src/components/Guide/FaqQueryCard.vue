@@ -1,9 +1,9 @@
 <template>
     <div>
-    <el-card :body-style="{ padding: '0px' }" shadow="hover">
+    <el-card :body-style="{ padding: '0px' }" style="min-height:300px;" shadow="hover">
       <img :src=picsrc class="image">
-      <div style="padding: 14px;">
-        <h1><i :class=whattype[type].icon></i>{{whattype[type].title}}</h1>
+      <div style="padding: 5px;">
+        <h1 style="padding-top:20px"><i :class=whattype[type].icon></i>{{whattype[type].title}}</h1>
         <div class="bottom clearfix">
           <!-- <time class="time">{{ currentDate }}</time> -->
           <p>{{whattype[type].describe}}</p>

@@ -1,8 +1,8 @@
 <template>
     <div>
-    <el-card :body-style="{ padding: '0px' }" shadow="hover">
+    <el-card :body-style="{ padding: '0px' }" style="max-height:300px; max-width:350px" shadow="hover">
       <img :src=picsrc class="image">
-      <div style="padding: 14px;">
+      <div style="padding: 5px;">
         <h1><i :class=whattype[type].icon></i>{{whattype[type].title}}</h1>
         <div class="bottom clearfix">
           <!-- <time class="time">{{ currentDate }}</time> -->
