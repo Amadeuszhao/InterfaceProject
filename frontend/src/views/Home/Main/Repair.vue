@@ -1,5 +1,12 @@
 <template>
   <div id='RepairSelection'>
+  <el-row>
+  <el-col :span="12" :offset="6">
+      <h1 style="font-size:30px"><i class="el-icon-magic-stick" style="margin-right:20px"></i>Backdoor attack</h1>
+      <p align="justify" style="margin:50px 0px">
+      </p>
+  </el-col>
+  </el-row>
   <h2>Choose evaluation metric: </h2>
   <select @click='clear_selection' v-model='metric_selection' style='width: 200px'>
     <option v-for='(key,value) in metric_options' v-bind:key='key' :value='key'>
@@ -18,7 +25,8 @@
    <br>
   <div v-if='dataset_selection'>Selected model: {{metric_selection.model}}</div>
   <br>
-  <button @click='JSON_generate(dataset_selection)' >Generate Report</button>
+  <el-button plain type="primary" @click='JSON_generate(dataset_selection)' >Generate Report</el-button>
+  <!-- <button @click='JSON_generate(dataset_selection)' >Generate Report</button> -->
   <br>
   <DiagramGeneration v-if='showDiagram' :config='jsonData' />
   <br>

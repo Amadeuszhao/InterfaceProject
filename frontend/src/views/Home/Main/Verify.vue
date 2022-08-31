@@ -16,7 +16,7 @@
                   <i class="material-icons">replay</i>
                 </button>
                 <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored ui-playButton"
-                  id="play-pause-button" title="Run/Pause" v-on:click="resultHidden = !resultHidden">
+                  id="play-pause-button" title="Run/Pause" @click="loadTable">
                   <i class="material-icons">play_arrow</i>
                   <i class="material-icons">pause</i>
                 </button>
@@ -25,8 +25,8 @@
                 <label for="model">Select Model</label>
                 <div class="select">
                   <select id="model">
-                    <option value="LeNet-5">LeNet-5</option>
-                    <option value="ResNet-50">ResNet-50</option>
+                    <option value="LeNet-5">LeNet</option>
+                    <!-- <option value="ResNet-50">ResNet-50</option> -->
                   </select>
                 </div>
               </div>
@@ -44,44 +44,44 @@
           </div>
           </el-col>
         </el-row>
-        <el-row v-if="resultHidden">
-             <el-col :span="16" :offset="6">
+        <el-row style="padding-top: 30px">
+          <el-col :span="16" :offset="8">
+          <div id="main" style="width: 600px;height:400px;"></div>
+          </el-col>
+        </el-row>
+        <el-row v-if="resultShow" style="padding-top: 30px">
+             <el-col :span="16" :offset="4">
               <div>
                 <el-table
                   id="table"
                   v-loading="loading"
                   :data="tableData"
-                  :cell-class-name="tableClassChecker"
                   style="width: 100%">
                   <!-- <slot name="columns"> -->
                     <el-table-column
-                      label="parameter"
-                      prop="param"/>
+                      label="result"
+                      prop="result"/>
                     <el-table-column
-                      label="fairness"
-                      prop="fairness"
+                    label="total input bounds"
+                    prop="total"
                       />
                     <el-table-column
-                      label="robustness"
-                      prop="robustness"
+                      label="verified"
+                      prop="verify"
                       />
-                      <!-- <el-table-column label="File">
-                        {{d.file}}
-                      </el-table-column> -->
-                      <!-- <template slot-scope="{row}">
-                        <slot :name="column.prop || column.type || column.label" :row="row">
-                          {{row[column.prop]}}
-                        </slot>
-                      </template> -->
-                    <!-- </el-table-column>
-                    <el-table-column label="Path">
-                      {{d.path}} -->
                     <el-table-column
-                      label="verification"
-                      prop='verify'
+                      label="falsified"
+                      prop="falsify"
+                      />
+                    <el-table-column
+                      label="timeout"
+                      prop="timeout"
                     />
-                  <!-- </slot> -->
-                </el-table>
+                    <el-table-column
+                      label="time"
+                      prop="time"
+                    />
+                  </el-table>
                 <!-- <slot name="pagination" :page="page" :total="total">
                   <el-pagination
                     v-model="page"
@@ -97,49 +97,138 @@
     </div>
 </template>
 <script>
+import verifyData from './assets/verifyData.json'
+import * as echarts from 'echarts'
+
 export default {
   name: 'StatisEntity',
   data () {
     return {
       myname: 'house',
       mylimit: '50',
-      resultHidden: false,
+      resultShow: false,
       loading: false,
-      selectedProperty: 'Fairness',
+      selectedProperty: 'Robustness',
       properties: [
-        { id: 1, name: 'Fairness' },
-        { id: 2, name: 'Robustness' },
-        { id: 3, name: 'Local Robustness' }
+        // { id: 1, name: 'Fairness' },
+        { id: 1, name: 'Robustness' }
+        // { id: 3, name: 'Local Robustness' }
       ],
       tableData: [{
-        param: '0.1',
-        fairness: '0.8',
-        robustness: '0.3',
-        verify: 'Not verified'
+        result: 'result1',
+        total: '45',
+        verify: verifyData[0].Verified,
+        falsify: verifyData[0].Falsified,
+        timeout: verifyData[0].Timeout,
+        time: verifyData[0].Time
       },
       {
-        param: '0.3',
-        fairness: '0.5',
-        robustness: '0.7',
-        verify: 'Verified'
-      }],
+        result: 'result2',
+        total: '36',
+        verify: verifyData[1].Verified,
+        falsify: verifyData[1].Falsified,
+        timeout: verifyData[1].Timeout,
+        time: verifyData[1].Time
+      },
+      {
+        result: 'result3',
+        total: '4',
+        verify: verifyData[2].Verified,
+        falsify: verifyData[2].Falsified,
+        timeout: verifyData[2].Timeout,
+        time: verifyData[2].Time
+      },
+      {
+        result: 'result4',
+        total: '42',
+        verify: verifyData[3].Verified,
+        falsify: verifyData[3].Falsified,
+        timeout: verifyData[3].Timeout,
+        time: verifyData[3].Time
+      },
+      {
+        result: 'result5',
+        total: '40',
+        verify: verifyData[4].Verified,
+        falsify: verifyData[4].Falsified,
+        timeout: verifyData[4].Timeout,
+        time: verifyData[4].Time
+      }
+      ],
       page: 1,
       total: 10,
       sortParams: []
     }
   },
-  components: {
-  },
   methods: {
-    tableClassChecker ({ row, column, rowIndex, columnIndex }) {
-      if (columnIndex === 3) {
-        if (row.verify === 'Verified') {
-          return 'greenClass'
-        } else {
-          return 'redClass'
-        }
+    async loadTable () {
+      await this.loadChart()
+      this.resultShow = true
+    },
+    async loadChart () {
+      var chartDom = document.getElementById('main')
+      var myChart = echarts.init(chartDom)
+      var option
+
+      option = {
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          }
+        },
+        legend: {},
+        grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+        },
+        xAxis: [
+          {
+            type: 'category',
+            data: ['Result1', 'Result2', 'Result3', 'Result4', 'Result5']
+          }
+        ],
+        yAxis: [
+          {
+            type: 'value'
+          }
+        ],
+        series: [
+          {
+            name: 'Verified',
+            type: 'bar',
+            stack: 'count',
+            emphasis: {
+              focus: 'series'
+            },
+            data: [0, 0, 0, 8, 0]
+          },
+          {
+            name: 'Falsified',
+            type: 'bar',
+            stack: 'count',
+            emphasis: {
+              focus: 'series'
+            },
+            data: [0, 8, 0, 0, 32]
+          },
+          {
+            name: 'Timeout',
+            type: 'bar',
+            stack: 'count',
+            emphasis: {
+              focus: 'series'
+            },
+            data: [45, 28, 4, 34, 8]
+          }
+        ]
       }
+      myChart.setOption(option)
     }
+  },
+  mounted () {
   }
 }
 </script>
